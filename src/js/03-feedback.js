@@ -26,10 +26,10 @@ function onInputChange(e) {
  function onFormSubmit(e) {
      e.preventDefault();
      const input = {
-        email: refs.email.value,
-        message: refs.messg.value,
-    }
-     console.log(input);
+         email: refs.email.value,
+         message: refs.messg.value,
+     };
+     console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
      e.currentTarget.reset();
      localStorage.removeItem("feedback-form-state");
      
